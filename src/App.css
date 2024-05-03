@@ -23,6 +23,11 @@ body {
   color: #ccd0d0;
 }
 
+.icon:hover {
+  color: #cc0033;
+  cursor: pointer;
+}
+
 .content {
   flex: 1;
   display: flex;

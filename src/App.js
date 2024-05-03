@@ -25,7 +25,9 @@ function App() {
     <div>
       {showHeader && (
         <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
-          <FaHome className="icon"/>
+          <Link to="/">
+            <FaHome className="icon"/>
+          </Link>
         </header>
       )}
       <div className="App" style={theme}>
