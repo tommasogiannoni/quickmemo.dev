@@ -1,0 +1,49 @@
+.text-title {
+    color: #000000;
+    font-size: 35px;
+    font-family: 'Gotham';
+    text-align: left;
+}
+
+.content-new {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-content {
+    margin-top: 10px;
+    font-weight: 300;
+    font-family: 'Gotham';
+}
+
+.container-small {
+    width: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+    .container-small {
+      max-width: 540px; /* oppure il valore che preferisci */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .container-small {
+      max-width: 720px; /* oppure il valore che preferisci */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .container-small {
+      max-width: 960px; /* oppure il valore che preferisci */
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .container-small {
+      max-width: 1140px; /* oppure il valore che preferisci */
+    }
+  }

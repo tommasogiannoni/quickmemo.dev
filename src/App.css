@@ -25,7 +25,7 @@
 .new-note-button {
   color: #ccd0d0;
   border: none;
-  font-family: 'Gotham', sans-serif;
+  font-family: 'Gotham';
   font-size: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -73,15 +73,11 @@ nav ul li {
   margin-right: 20px;
 }
 
-nav ul li a {
+.footer-item {
   color: #000000;
   text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: #ff0043;
-}
-
-.change-theme {
   cursor: pointer;
+}
+.footer-item:hover {
+  color: #ff0043;
 }
