@@ -24,7 +24,7 @@ function App() {
       <div className="App" style={theme}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/new" element={<NewNotePage />} />
+          <Route path="/new" element={<NewNotePage theme={theme}/>} />
         </Routes>
         <footer>
           <nav>
