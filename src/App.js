@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import './App.css';
+import { Link, useLocation } from 'react-router-dom';
+import { FaHome} from 'react-icons/fa';
 import { Route, Routes } from 'react-router-dom';
 import NewNotePage from './components/NewNotePage';
 import AboutMe from './components/About Me';
-
-
-import './App.css';
 import Home from './components/Home';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
+  const showHeader = location.pathname === '/about-me' || location.pathname === '/new';
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -21,7 +22,12 @@ function App() {
   };
 
   return (
-    <Router>
+    <div>
+      {showHeader && (
+        <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
+          <FaHome className="icon"/>
+        </header>
+      )}
       <div className="App" style={theme}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -37,7 +43,7 @@ function App() {
           </nav>
         </footer>
       </div>
-    </Router>
+    </div>
   );
 }
 

@@ -1,7 +1,12 @@
 .aboutme-app {
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 53px;
 }
 .title-about {
     color: #cc0033;

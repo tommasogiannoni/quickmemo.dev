@@ -1,13 +1,12 @@
-/* Stile per il contenitore principale */
 .container {
   display: flex;
-  justify-content: center; /* Centrare orizzontalmente */
-  align-items: center; /* Centrare verticalmente */
-  height: 100vh; /* Altezza del 100% della viewport */
+  justify-content: center; 
+  height: 100vh;
 }
 
 /* Stile per la card */
 .note-card {
+  margin-top: 5px;
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 20px;
@@ -35,8 +34,12 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   font-family: 'Gotham';
-  resize: vertical; 
-  max-height: 70vh;
-  min-height: 220px;
-  overflow: hidden;
+  resize: none;
+  height: auto; 
+  min-height: calc(100vh - 200px); 
+  overflow-y: auto; 
+}
+
+.note-content-input::-webkit-scrollbar {
+  display: none; /* Nascondi la scrollbar verticale solo quando non è necessaria */
 }

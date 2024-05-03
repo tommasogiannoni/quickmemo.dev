@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaGithub, FaMedium } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaMedium} from 'react-icons/fa';
 import '../styles/Home.css';
 import '../styles/AboutMe.css';
 
@@ -7,7 +7,6 @@ function AboutMe() {
   return (
     <div className='aboutme-app'>
         <div className="content">
-            <h2 className="title-about">About Me</h2>
             <div className="author-links">
                 <ul className="social-links">
                     <li className="icon">

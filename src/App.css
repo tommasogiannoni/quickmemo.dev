@@ -1,7 +1,25 @@
+body {
+  overflow: hidden;
+}
 .App {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: rgb(238, 238, 238);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 28px;
+  color: #ccd0d0;
 }
 
 .content {
