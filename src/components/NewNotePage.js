@@ -12,7 +12,7 @@ function NewNotePage({ theme })  {
   };
   
   const handleContentChange = (event) => {
-    if (event.target.value.length <= 1024) {
+    if (event.target.value.length <= 5000) {
       setContent(event.target.value);
     }
   };
