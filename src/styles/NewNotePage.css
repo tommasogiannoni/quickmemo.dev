@@ -1,49 +1,41 @@
-.text-title {
-    color: #000000;
-    font-size: 35px;
-    font-family: 'Gotham';
-    text-align: left;
+/* Stile per il contenitore principale */
+.container {
+  display: flex;
+  justify-content: center; /* Centrare orizzontalmente */
+  align-items: center; /* Centrare verticalmente */
+  height: 100vh; /* Altezza del 100% della viewport */
 }
 
-.content-new {
-    display: flex;
-    flex-direction: column;
+/* Stile per la card */
+.note-card {
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 720px;
 }
 
-.content-content {
-    margin-top: 10px;
-    font-weight: 300;
-    font-family: 'Gotham';
+.note-title-input {
+  background-color: unset;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 2.1rem;
+  margin-bottom: 15px;
+  font-family: 'Gotham';
+  font-weight: bold;
+  color: #cc0033;
 }
 
-.container-small {
-    width: 100%;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  
-  @media (min-width: 576px) {
-    .container-small {
-      max-width: 540px; /* oppure il valore che preferisci */
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .container-small {
-      max-width: 720px; /* oppure il valore che preferisci */
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .container-small {
-      max-width: 960px; /* oppure il valore che preferisci */
-    }
-  }
-  
-  @media (min-width: 1200px) {
-    .container-small {
-      max-width: 1140px; /* oppure il valore che preferisci */
-    }
-  }
+.note-content-input {
+  background-color: unset;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-family: 'Gotham';
+  resize: vertical; 
+  max-height: 70vh;
+  min-height: 40px;
+}
