@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import NewNotePage from './components/NewNotePage';
+import AboutMe from './components/About Me';
 
 
 import './App.css';
@@ -25,11 +26,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new" element={<NewNotePage theme={theme}/>} />
+          <Route path="/about-me" element={<AboutMe />} />
         </Routes>
         <footer>
           <nav>
             <ul>
-              <li className='footer-item' >About me</li>
+              <li className='footer-item'><Link to="/about-me" style={{ textDecoration: 'none' }}>About me</Link></li>
               <li className="footer-item" onClick={toggleDarkMode}>{darkMode ? 'Light Mode' : 'Dark Mode'}</li>
             </ul>
           </nav>

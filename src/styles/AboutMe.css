@@ -1,0 +1,41 @@
+.aboutme-app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.title-about {
+    color: #cc0033;
+    margin-bottom: 10px;
+    font-family: 'Frutiger';
+    font-size: 50px;
+}
+
+
+.author-links {
+    display: flex;
+    align-items: center;
+}
+  
+.author-links .social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.author-links .social-links li {
+    font-size: xx-large;
+}
+
+.author-links .social-links a {
+    color: #ccd0d0; 
+}
+
+.author-links .social-links a:hover {
+    color: #cc0033; 
+}
+
+.icon {
+    margin-right: 5px;
+    margin-left: 5px;
+}
