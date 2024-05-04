@@ -1,4 +1,6 @@
 import {React, useState } from 'react';
+import { FaSave } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 import '../styles/NewNotePage.css'
 
 function NewNotePage({ theme })  {
@@ -20,6 +22,10 @@ function NewNotePage({ theme })  {
   return (
     <div className="container">
       <div className='container-small content-new note-card'>
+        <div className='note-actions'>
+          <FaSave className='save-icon' style={{ color: theme.color }}/>
+        </div>
+        <div>
           <input 
             type="text" 
             className="note-title-input" 
@@ -35,6 +41,7 @@ function NewNotePage({ theme })  {
           style={{ color: theme.color }} 
         />
       </div>
+        </div>
     </div>
   );
 }

@@ -36,10 +36,28 @@
   font-family: 'Gotham';
   resize: none;
   height: auto; 
-  min-height: calc(90vh - 200px); 
+  min-height: calc(80vh - 200px); 
   overflow-y: auto; 
 }
 
 .note-content-input::-webkit-scrollbar {
   display: none; /* Nascondi la scrollbar verticale solo quando non è necessaria */
+}
+
+.note-actions{
+  display: flex;
+  justify-content: right;
+  font-size: 25px;
+  padding: 5px;
+  border-bottom: solid;
+  border-width: 1px;
+  margin-bottom: 0.8em;
+  border-color: #ccd0d0;
+  .save-icon {
+    margin-bottom: 0.1em;
+  }
+}
+.note-actions :hover{
+  color: #287b28;
+  cursor: pointer;
 }
