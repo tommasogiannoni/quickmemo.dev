@@ -21,13 +21,20 @@ function Home({savedNotesList}) {
           (
             <div className="content-list">
               <div className='list-title'>
-                <span>Your saved notes</span>
+                <span className='notes-title'>Notes</span>
+                <Link to="/new">
+                  <CiCirclePlus 
+                    className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                  />
+                </Link>
               </div>
               {savedNotesList.map((note, index) => (
                 <div key={index} className="note-item">
                   <div className="note-info">
                     <h2>{note[0]}</h2>
-                    <p>Created on: DD/MM/YYYY</p>
+                    <p>{note[2]}</p>
                   </div>
                   <button className="delete-button"><MdDelete className='icon-delete'/></button>
                 </div>

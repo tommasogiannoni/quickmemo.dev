@@ -21,7 +21,7 @@ function NewNotePage({ theme })  {
   };
 
   const saveNotes = () => {
-    const newNotes = [title, content];
+    const newNotes = [title, content, new Date().toLocaleDateString()];
     if(title.length > 0 && content.length>0)
       localStorage.setItem('note_' + uuidv4(), JSON.stringify(newNotes));
   }

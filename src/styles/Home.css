@@ -1,7 +1,8 @@
 .home-app {
-    min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    justify-content: center; 
+    height: 100vh;
+    width: 100%;
 }
   
 .content {
@@ -14,24 +15,26 @@
 
 .content-list {
     margin-top: 3em;
-    text-align: left;
-    width: 100% !important;
-    min-width: 720px;
-}
-
-@media (max-width: 768px) {
-    .content-list {
-        max-width: 90%; /* Larghezza massima del 90% per dispositivi più piccoli */
-    }
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 720px;
 }
 
 .list-title {
     font-family: 'Gotham';
     padding: 5px;    
     margin-bottom: 0.8em;
-    color: #cc0033;
+    color: #ccd0d0;
     font-size: 2.1rem;
     font-weight: bold;
+    justify-content: space-between;
+    display: flex;
+
+    .notes-title {
+        margin-top: 0.2em;
+    }
 }
 
 .note-item {
@@ -44,10 +47,11 @@
   
 .note-info {
     flex: 1;
+    font-family: 'Gotham';
 }
   
 .delete-button {
-    color: #cc0033;
+    color: #cc0000;
     border: none;
     padding: 7px 5px 5px 5px;
     border-radius: 4px;
