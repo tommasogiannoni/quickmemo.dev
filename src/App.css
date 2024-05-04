@@ -19,11 +19,13 @@ body {
 
 .icon {
   margin-top: 0.5em;
+  margin-right: 5px;
   font-size: 26px;
   color: #ccd0d0;
 }
 
-.icon:hover {
+.icon:hover,
+.icon.touch-active {
   color: #cc0033;
   cursor: pointer;
 }
@@ -56,13 +58,13 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.new-note-button:hover {
+.new-note-button:hover,
+.new-note-button:active,
+.new-note-button:focus,
+.new-note-button.touch-active {
   color: #cc0033;
 }
 
-.icon {
-  margin-right: 5px;
-}
 
 .text {
   font-weight: bold;

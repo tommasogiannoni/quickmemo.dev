@@ -1,6 +1,5 @@
 import {React, useState } from 'react';
 import { FaSave } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
 import '../styles/NewNotePage.css'
 
 function NewNotePage({ theme })  {

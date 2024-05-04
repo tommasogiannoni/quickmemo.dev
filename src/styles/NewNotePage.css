@@ -4,7 +4,6 @@
   height: 100vh;
 }
 
-/* Stile per la card */
 .note-card {
   margin-top: 3em;
   border-radius: 8px;
@@ -41,7 +40,7 @@
 }
 
 .note-content-input::-webkit-scrollbar {
-  display: none; /* Nascondi la scrollbar verticale solo quando non è necessaria */
+  display: none; 
 }
 
 .note-actions{
@@ -54,9 +53,11 @@
   margin-bottom: 0.8em;
   border-color: #ccd0d0;
   .save-icon {
+    color: #adafaf !important;
     margin-bottom: 0.1em;
   }
 }
+
 .note-actions :hover{
   color: #287b28;
   cursor: pointer;

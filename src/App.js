@@ -9,16 +9,24 @@ import Home from './components/Home';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [isTouchActive, setIsTouchActive] = useState(false);
   const location = useLocation();
   const showHeader = location.pathname === '/about-me' || location.pathname === '/new';
+  const theme = {
+    backgroundColor: darkMode ? '#2d2d2d' : '#eeeeee',
+    color: darkMode ? '#eeeeee' : '#000000',
+  };
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
-  const theme = {
-    backgroundColor: darkMode ? '#2d2d2d' : '#eeeeee',
-    color: darkMode ? '#eeeeee' : '#000000',
+  const handleTouchStart = () => {
+    setIsTouchActive(true);
+  };
+
+  const handleTouchEnd = () => {
+    setIsTouchActive(false);
   };
 
   return (
@@ -26,7 +34,11 @@ function App() {
       {showHeader && (
         <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
           <Link to="/">
-            <FaHome className="icon"/>
+            <FaHome 
+              className={`icon ${isTouchActive ? 'touch-active' : ''}`}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
+            />
           </Link>
         </header>
       )}
