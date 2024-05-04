@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 import '../styles/NewNotePage.css'
 
-function NewNotePage({ theme })  {
+function NewNotePage({ theme, savedNotesList, setSavedNotesList })  {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   
@@ -21,9 +21,13 @@ function NewNotePage({ theme })  {
   };
 
   const saveNotes = () => {
-    const newNotes = [title, content, new Date().toLocaleDateString()];
-    if(title.length > 0 && content.length>0)
-      localStorage.setItem('note_' + uuidv4(), JSON.stringify(newNotes));
+    const newNote = [title, content, new Date().toLocaleDateString()];
+    if(title.length > 0 && content.length>0) {
+
+      const newNotesList = [...savedNotesList, newNote];
+      setSavedNotesList(newNotesList);
+      localStorage.setItem('note_' + uuidv4(), JSON.stringify(newNote));
+    }
   }
 
   return (

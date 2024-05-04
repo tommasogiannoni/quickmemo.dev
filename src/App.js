@@ -59,7 +59,7 @@ function App() {
       <div className="App" style={theme}>
         <Routes>
           <Route path="/" element={<Home savedNotesList={notes}/>} />
-          <Route path="/new" element={<NewNotePage theme={theme}/>} />
+          <Route path="/new" element={<NewNotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
         <footer>
