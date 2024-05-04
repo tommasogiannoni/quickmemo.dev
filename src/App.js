@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Link, useLocation } from 'react-router-dom';
-import { FaHome} from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import { Route, Routes } from 'react-router-dom';
 import NewNotePage from './components/NewNotePage';
 import AboutMe from './components/About Me';

@@ -56,9 +56,16 @@
     color: #adafaf !important;
     margin-bottom: 0.1em;
   }
+  .download-icon {
+    margin-left: 0.4em;
+    font-size: 23px;
+    color: #adafaf !important;
+    margin-bottom: 0.1em;
+  }
 }
 
-.note-actions :hover{
+.note-actions :hover {
   color: #287b28;
   cursor: pointer;
+
 }
