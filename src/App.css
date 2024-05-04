@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  background-color: rgb(238, 238, 238);
 }
 .App {
   min-height: 100vh;

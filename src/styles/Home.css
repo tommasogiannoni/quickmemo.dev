@@ -11,3 +11,48 @@
     justify-content: center;
     align-items: center;
 }
+
+.content-list {
+    margin-top: 3em;
+    text-align: left;
+    width: 100% !important;
+    min-width: 720px;
+}
+
+@media (max-width: 768px) {
+    .content-list {
+        max-width: 90%; /* Larghezza massima del 90% per dispositivi più piccoli */
+    }
+}
+
+.list-title {
+    font-family: 'Gotham';
+    padding: 5px;    
+    margin-bottom: 0.8em;
+    color: #cc0033;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 0.1em solid #ccd0d0;
+}
+  
+.note-info {
+    flex: 1;
+}
+  
+.delete-button {
+    color: #cc0033;
+    border: none;
+    padding: 7px 5px 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.8em;
+    background-color: unset;
+}
+  

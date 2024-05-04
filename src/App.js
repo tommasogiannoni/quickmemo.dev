@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
@@ -10,6 +10,7 @@ import Home from './components/Home';
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [isTouchActive, setIsTouchActive] = useState(false);
+  const [notes, setNotes] = useState([]);
   const location = useLocation();
   const showHeader = location.pathname === '/about-me' || location.pathname === '/new';
   const theme = {
@@ -29,6 +30,19 @@ function App() {
     setIsTouchActive(false);
   };
 
+  useEffect(() => {
+    const savedNotes = [];
+
+    for(let i=0; i<localStorage.length; i++) {
+      const key = localStorage.key(i);
+
+      if( key.includes('note_') ) {
+        savedNotes.push(JSON.parse( localStorage.getItem(key) ));
+      }
+    }
+    setNotes(savedNotes);
+  }, []);
+
   return (
     <div>
       {showHeader && (
@@ -44,7 +58,7 @@ function App() {
       )}
       <div className="App" style={theme}>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home savedNotesList={notes}/>} />
           <Route path="/new" element={<NewNotePage theme={theme}/>} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>

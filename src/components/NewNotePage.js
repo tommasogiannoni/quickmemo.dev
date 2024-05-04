@@ -1,5 +1,7 @@
 import {React, useState } from 'react';
 import { FaSave, FaDownload  } from "react-icons/fa";
+import { v4 as uuidv4 } from 'uuid';
+
 import '../styles/NewNotePage.css'
 
 function NewNotePage({ theme })  {
@@ -18,11 +20,17 @@ function NewNotePage({ theme })  {
     }
   };
 
+  const saveNotes = () => {
+    const newNotes = [title, content];
+    if(title.length > 0 && content.length>0)
+      localStorage.setItem('note_' + uuidv4(), JSON.stringify(newNotes));
+  }
+
   return (
     <div className="container">
-      <div className='container-small content-new note-card'>
+      <div className='note-card'>
         <div className='note-actions'>
-          <FaSave className='save-icon' style={{ color: theme.color }}/>
+          <FaSave className='save-icon' style={{ color: theme.color }} onClick={saveNotes}/>
           <FaDownload className='download-icon' style={{ color: theme.color }}/>
         </div>
         <div>
