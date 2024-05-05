@@ -36,8 +36,8 @@
   margin-bottom: 10px;
   font-family: 'Gotham';
   resize: none;
-  height: calc(80vh - 200px);
-  min-height: fit-content;
+  height: calc(100vh - 180px);
+  min-height: 100px; 
 }
 
 .note-content-input::-webkit-scrollbar {
@@ -88,6 +88,7 @@
   .note-content-input {
     font-size: 1.3rem; /* Riduci la dimensione del testo per il contenuto */
     min-height: 100px; /* Modifica l'altezza minima del contenuto */
+    height: auto; /* Imposta l'altezza su auto per adattarsi dinamicamente al contenuto */
   }
 
   .note-actions {
