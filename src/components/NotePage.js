@@ -59,7 +59,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
       <div className='note-card'>
         <div className='note-actions'>
           <FaSave className='save-icon' style={{ color: theme.color }} onClick={saveNotes}/>
-          <FaDownload className='download-icon' style={{ color: theme.color }}/>
+          {/* <FaDownload className='download-icon' style={{ color: theme.color }}/> */}
         </div>
         <div>
           <input 

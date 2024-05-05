@@ -4,7 +4,7 @@ import { CiCirclePlus } from "react-icons/ci";
 import { MdDelete } from "react-icons/md";
 import '../styles/Home.css'
 
-function Home({savedNotesList}) {
+function Home({savedNotesList, setSavedNotesList}) {
   const [isTouchActive, setIsTouchActive] = useState(false);
 
   const handleTouchStart = () => {
@@ -13,6 +13,14 @@ function Home({savedNotesList}) {
 
   const handleTouchEnd = () => {
     setIsTouchActive(false);
+  };
+
+  const handleDeleteNote = (index) => {
+    const updatedNotesList = [...savedNotesList];
+    const idToRemove = savedNotesList.findIndex( elem => elem[0] === index);
+    updatedNotesList.splice(idToRemove, 1);
+    setSavedNotesList(updatedNotesList);
+    localStorage.removeItem(index);
   };
 
   return (
@@ -38,7 +46,7 @@ function Home({savedNotesList}) {
                       <p className='date-info'>{note[3]}</p>
                     </div>
                   </Link>
-                  <button className="delete-button"><MdDelete className='icon-delete'/></button>
+                  <button className="delete-button" onClick={() => handleDeleteNote(note[0])}><MdDelete className='icon-delete'/></button>
                 </div>
               ))}
             </div>

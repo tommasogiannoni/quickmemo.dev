@@ -25,7 +25,6 @@ function App() {
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    // Salva il nuovo stato in localStorage
     localStorage.setItem('darkMode', newDarkMode);
   };
 
@@ -66,7 +65,7 @@ function App() {
       )}
       <div className="App" style={theme}>
         <Routes>
-          <Route path="/" element={<Home savedNotesList={notes}/>} />
+          <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
