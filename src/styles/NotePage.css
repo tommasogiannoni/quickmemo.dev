@@ -70,27 +70,3 @@
   cursor: pointer;
 
 }
-
-
-/* Stili per dispositivi mobili */
-@media (max-width: 768px) {
-  .container {
-    align-items: flex-start; /* Allinea gli elementi in alto per evitare il ridimensionamento del contenuto quando appare la tastiera */
-    height: 100%; /* Modifica il calcolo dell'altezza per adattarsi dinamicamente alla dimensione del contenuto */
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
-
-  .note-title-input {
-    font-size: 2rem; /* Riduci la dimensione del testo per il titolo */
-  }
-
-  .note-content-input {
-    font-size: 1.3rem; /* Riduci la dimensione del testo per il contenuto */
-    min-height: 100px; /* Modifica l'altezza minima del contenuto */
-  }
-
-  .note-actions {
-    justify-content: flex-end; /* Modifica l'allineamento delle azioni */
-  }
-}
