@@ -32,10 +32,12 @@ function Home({savedNotesList}) {
               </div>
               {savedNotesList.map((note, index) => (
                 <div key={index} className="note-item">
-                  <div className="note-info">
-                    <h2>{note[0]}</h2>
-                    <p>{note[2]}</p>
-                  </div>
+                  <Link to={'/new'} state={{ note }}>
+                    <div className="note-info">
+                      <h2 className='note-title-detail'>{note[1]}</h2>
+                      <p className='date-info'>{note[3]}</p>
+                    </div>
+                  </Link>
                   <button className="delete-button"><MdDelete className='icon-delete'/></button>
                 </div>
               ))}

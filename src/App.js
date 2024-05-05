@@ -3,12 +3,15 @@ import './App.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FaHome } from 'react-icons/fa';
 import { Route, Routes } from 'react-router-dom';
-import NewNotePage from './components/NewNotePage';
+import NotePage from './components/NotePage';
 import AboutMe from './components/About Me';
 import Home from './components/Home';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedDarkMode = localStorage.getItem('darkMode');
+    return savedDarkMode === 'true';
+  });
   const [isTouchActive, setIsTouchActive] = useState(false);
   const [notes, setNotes] = useState([]);
   const location = useLocation();
@@ -19,7 +22,10 @@ function App() {
   };
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    // Salva il nuovo stato in localStorage
+    localStorage.setItem('darkMode', newDarkMode);
   };
 
   const handleTouchStart = () => {
@@ -59,7 +65,7 @@ function App() {
       <div className="App" style={theme}>
         <Routes>
           <Route path="/" element={<Home savedNotesList={notes}/>} />
-          <Route path="/new" element={<NewNotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
+          <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/about-me" element={<AboutMe />} />
         </Routes>
         <footer>

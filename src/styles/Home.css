@@ -49,6 +49,12 @@
     flex: 1;
     font-family: 'Gotham';
 }
+.note-title-detail {
+    text-decoration: underline;
+}
+.date-info {
+    text-decoration: none !important;
+}
   
 .delete-button {
     color: #cc0000;
@@ -60,3 +66,16 @@
     background-color: unset;
 }
   
+a:link { 
+    text-decoration: none;
+} 
+a:visited { 
+    text-decoration: none; 
+    color: unset;
+} 
+a:hover { 
+    text-decoration: none; 
+} 
+a:active { 
+    text-decoration: none; 
+}
