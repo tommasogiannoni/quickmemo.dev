@@ -81,7 +81,9 @@ function App() {
       </div>
       </BrowserView>
       <MobileView>
-          Nota available yet on mobile.
+      <div class="mobile-warning">
+        Not available yet for mobile
+      </div>
       </MobileView>
     </div>
   );

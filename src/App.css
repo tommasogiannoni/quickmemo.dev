@@ -108,3 +108,11 @@ nav ul li {
 .footer-item:hover {
   color: #cc0033;
 }
+
+.mobile-warning {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8d7da;
+  color: #721c24;
+}
