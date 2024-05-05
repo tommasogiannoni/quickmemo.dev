@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import NotePage from './components/NotePage';
 import AboutMe from './components/About Me';
 import Home from './components/Home';
+import { BrowserView, MobileView } from 'react-device-detect';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div>
+      <BrowserView>
       {showHeader && (
         <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
           <Link to="/">
@@ -77,6 +79,10 @@ function App() {
           </nav>
         </footer>
       </div>
+      </BrowserView>
+      <MobileView>
+          Nota available yet on mobile.
+      </MobileView>
     </div>
   );
 }
