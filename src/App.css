@@ -3,7 +3,7 @@ body {
   background-color: rgb(238, 238, 238);
 }
 .App {
-  min-height: 100vh;
+  height: calc(100vh - 54px);
   display: flex;
   justify-content: center;
 }
@@ -72,7 +72,7 @@ body {
 
 footer {
   background-color: #ccd0d0;
-  position: fixed;
+  position: absolute; 
   bottom: 0;
   left: 0;
   width: 100%;
@@ -81,7 +81,7 @@ footer {
 footer nav ul li {
   display: inline-block;
   margin-right: 5px;
-  min-width: 80px; /* Imposta la larghezza minima */
+  min-width: 80px; 
   font-weight: 300;
   font-size: 15px;
 }

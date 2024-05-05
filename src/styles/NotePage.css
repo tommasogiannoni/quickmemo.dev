@@ -1,7 +1,9 @@
 .container {
   display: flex;
   justify-content: center; 
-  height: 100vh;
+  height: calc(100vh - 80px);
+  width: 100%;
+  overflow-y: auto;
 }
 
 .note-card {
@@ -34,9 +36,8 @@
   margin-bottom: 10px;
   font-family: 'Gotham';
   resize: none;
-  height: auto; 
-  min-height: calc(80vh - 200px); 
-  overflow-y: auto; 
+  height: calc(80vh - 200px);
+  min-height: fit-content;
 }
 
 .note-content-input::-webkit-scrollbar {
