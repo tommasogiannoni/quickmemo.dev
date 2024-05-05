@@ -46,7 +46,7 @@ function Home({savedNotesList}) {
           : 
           (
             <div className="content">
-              <h1 className="title">Write.<span className='me'>me</span></h1>
+              <h1 className="title">QuickMemo.<span className='me'>dev</span></h1>
               <div>
                 <Link to="/new">
                   <CiCirclePlus 
