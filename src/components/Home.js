@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CiCirclePlus } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
+import { TrashIcon } from '@heroicons/react/24/outline'
 import '../styles/Home.css'
 
 function Home({savedNotesList, setSavedNotesList}) {
@@ -46,7 +46,7 @@ function Home({savedNotesList, setSavedNotesList}) {
                       <p className='date-info'>{note[3]}</p>
                     </div>
                   </Link>
-                  <button className="delete-button" onClick={() => handleDeleteNote(note[0])}><MdDelete className='icon-delete'/></button>
+                  <button className="delete-button" onClick={() => handleDeleteNote(note[0])}><TrashIcon className='icon-delete'/></button>
                 </div>
               ))}
             </div>

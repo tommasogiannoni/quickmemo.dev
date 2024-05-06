@@ -39,7 +39,11 @@
     color: #cc0033; 
 }
 
-.icon {
+.icon-about {
     margin-right: 5px;
     margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.icon-about:active {
+    transform: scale(1.2); /* Effetto di trasformazione al click */
 }

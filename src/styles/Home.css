@@ -61,8 +61,12 @@
     padding: 7px 5px 5px 5px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1.8em;
     background-color: unset;
+    width: 2.5em;
+    transition: transform 0.3s ease;
+}
+.delete-button:active {
+    transform: scale(1.2); /* Effetto di trasformazione al click */
 }
   
 a:link { 

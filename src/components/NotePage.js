@@ -1,7 +1,8 @@
 import {React, useEffect, useState } from 'react';
-import { FaSave, /*FaDownload*/  } from "react-icons/fa";
 import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
+import { BookmarkIcon } from '@heroicons/react/24/solid'
+
 import '../styles/NotePage.css'
 
 
@@ -64,7 +65,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     <div className="container">
       <div className='note-card'>
         <div className='note-actions'>
-          <FaSave className='save-icon' style={{ color: theme.color }} onClick={saveNotes}/>
+          <BookmarkIcon className='save-icon' style={{ color: theme.color }} onClick={saveNotes}/>
           {/* <FaDownload className='download-icon' style={{ color: theme.color }}/> */}
         </div>
         <div>
@@ -80,7 +81,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
           placeholder="Write me" 
           value={content} 
           onChange={handleContentChange}
-          style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px' }}
+          style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px', color: theme.color}}
           ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }} // Call updateTextareaHeight initially and whenever content changes
         />
       </div>

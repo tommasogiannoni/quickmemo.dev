@@ -9,17 +9,17 @@ function AboutMe() {
         <div className="content">
             <div className="author-links">
                 <ul className="social-links">
-                    <li className="icon">
+                    <li className="icon-about">
                         <a href="https://www.linkedin.com/in/tommasogiannoni/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin />
                         </a>
                     </li>
-                    <li className="icon">
+                    <li className="icon-about">
                         <a href="https://github.com/tommasogiannoni" target="_blank" rel="noopener noreferrer">
                         <FaGithub />
                         </a>
                     </li>
-                    <li className="icon">
+                    <li className="icon-about">
                         <a href="https://medium.com/@tommaso.giannoni" target="_blank" rel="noopener noreferrer">
                         <FaMedium />
                         </a>

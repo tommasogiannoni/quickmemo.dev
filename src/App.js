@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Link, useLocation } from 'react-router-dom';
-import { FaHome } from 'react-icons/fa';
 import { Route, Routes } from 'react-router-dom';
 import NotePage from './components/NotePage';
 import AboutMe from './components/About Me';
 import Home from './components/Home';
+import { HomeIcon } from '@heroicons/react/24/outline'
+
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -61,7 +62,7 @@ function App() {
       {showHeader && (
         <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
           <Link to="/">
-            <FaHome 
+            <HomeIcon 
               className={`icon ${isTouchActive ? 'touch-active' : ''}`}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}

@@ -16,8 +16,14 @@ body {
 .icon {
   margin-top: 0.5em;
   margin-right: 5px;
-  font-size: 26px;
   color: #ccd0d0;
+  background: none; /* Rimuove completamente lo sfondo */
+  border: none; /* Rimuove il bordo */
+  width: 1.8em;
+  transition: transform 0.3s ease;
+}
+.icon:active {
+  transform: scale(1.2); /* Effetto di trasformazione al click */
 }
 
 .icon:hover,

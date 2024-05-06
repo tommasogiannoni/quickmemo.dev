@@ -39,22 +39,22 @@
 .note-actions{
   display: flex;
   justify-content: right;
-  font-size: 25px;
   padding: 5px;
   border-bottom: solid;
   border-width: 1px;
   margin-bottom: 0.8em;
   border-color: #ccd0d0;
-  .save-icon {
-    color: #adafaf !important;
-    margin-bottom: 0.1em;
-  }
-  .download-icon {
-    margin-left: 0.4em;
-    font-size: 23px;
-    color: #adafaf !important;
-    margin-bottom: 0.1em;
-  }
+}
+
+.save-icon {
+  color: #adafaf !important;
+  margin-bottom: 0.1em;
+  width: 1.5em;
+  transition: transform 0.3s ease;
+}
+
+.save-icon:active {
+  transform: rotate(-45deg) scale(1.2); /* Effetto di trasformazione al click */
 }
 
 .note-actions :hover {
