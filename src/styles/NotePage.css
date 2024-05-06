@@ -11,8 +11,6 @@
   margin-bottom: 20px;
   width: 100%;
   max-width: 720px;
-  height: auto; /* Imposta l'altezza su auto per consentire il ridimensionamento */
-  overflow: visible; /* Assicurati che non ci sia overflow nascosto */
 }
 
 .note-title-input {
@@ -36,28 +34,6 @@
   font-family: 'Gotham';
   resize: none;
   margin-bottom: 53px;
-
-  /* Personalizzazione della scrollbar */
-  scrollbar-width: thin; /* Per i browser che supportano il CSS standard */
-  scrollbar-color: #ccc transparent; /* Per i browser che supportano il CSS standard */
-
-  /* Per i browser basati su WebKit (come Chrome/Safari) */
-  &::-webkit-scrollbar {
-    width: 8px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: #999;
-  }
 }
 
 .note-actions{
