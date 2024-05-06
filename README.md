@@ -1,6 +1,6 @@
 # QuickMemo.dev
 <br/>
-<img src="https://github.com/tommasogiannoni/toy-robot-app/blob/master/src/assets/img-screen.png"></h2>
+<img src="https://github.com/tommasogiannoni/quickmemo.dev/blob/master/src/assets/img-screen.png"></h2>
 <br/>
 An open-source web application for intuitively taking and organizing notes directly from the browser,
 optimized for seamless use on both desktop and mobile devices
