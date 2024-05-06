@@ -55,6 +55,11 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     }
   }
 
+  const updateTextareaHeight = (element) => {
+    element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
+    element.style.height = `${element.scrollHeight}px`; // Setting the height to the scrollHeight
+  };
+
   return (
     <div className="container">
       <div className='note-card'>
@@ -70,15 +75,14 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
             value={title} 
             onChange={handleTitleChange} 
           />
-          <textarea 
-            className="note-content-input" 
-            placeholder="Write me" 
-            value={content} 
-            onChange={handleContentChange}
-            style={{ color: theme.color }}
-            rows={50}
-            id="review-text"
-          />
+        <textarea 
+          className="note-content-input" 
+          placeholder="Write me" 
+          value={content} 
+          onChange={handleContentChange}
+          style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px' }}
+          ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }} // Call updateTextareaHeight initially and whenever content changes
+        />
       </div>
         </div>
     </div>
