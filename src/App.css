@@ -1,5 +1,9 @@
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: rgb(238, 238, 238);
+  overflow-x: hidden;
 }
 .App {
   display: flex;
