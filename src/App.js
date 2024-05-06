@@ -25,6 +25,9 @@ function App() {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
     localStorage.setItem('darkMode', newDarkMode);
+    // set also body color
+    document.body.style.backgroundColor = newDarkMode ? '#2d2d2d' : '#eeeeee';
+    document.body.style.color = newDarkMode ? '#eeeeee' : '#000000';
   };
 
   const handleTouchStart = () => {
@@ -46,7 +49,12 @@ function App() {
       }
     }
     setNotes(savedNotes);
-  }, []);
+
+    // body theme update
+    document.body.style.backgroundColor = theme.backgroundColor;
+    document.body.style.color = theme.color;
+
+  }, [theme.backgroundColor, theme.color]);
 
   return (
     <div>
