@@ -49,8 +49,13 @@ body {
   margin-bottom: 10px;
   font-family: 'Frutiger';
   font-size: 50px;
+
   .me {
     font-style: italic;
+  }
+
+  @media only screen and (max-width: 768px) { 
+      font-size: 40px;
   }
 }
 
