@@ -6,10 +6,32 @@ body {
   height: calc(100vh - 54px);
   display: flex;
   justify-content: center;
+  overflow-y: auto;
+
+  /* Personalizzazione della scrollbar */
+  scrollbar-width: thin; /* Per i browser che supportano il CSS standard */
+  scrollbar-color: #ccc transparent; /* Per i browser che supportano il CSS standard */
+
+  /* Per i browser basati su WebKit (come Chrome/Safari) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
 }
 
 .sticky-header {
-  position: sticky;
   top: 0;
   padding: 10px;
   display: flex;
@@ -36,7 +58,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 53px; /*this is the dimension of the footer*/
 }
 
 

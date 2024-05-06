@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center; 
   width: 100%;
-  overflow-y: auto;
-  height: auto;
 }
 
 .note-card {
@@ -13,6 +11,8 @@
   margin-bottom: 20px;
   width: 100%;
   max-width: 720px;
+  height: auto; /* Imposta l'altezza su auto per consentire il ridimensionamento */
+  overflow: visible; /* Assicurati che non ci sia overflow nascosto */
 }
 
 .note-title-input {
@@ -33,15 +33,31 @@
   border: none;
   outline: none;
   font-size: 1.5rem;
-  margin-bottom: 10px;
   font-family: 'Gotham';
   resize: none;
-  height: calc(80vh - 200px);
-  min-height: fit-content;
-}
+  margin-bottom: 53px;
 
-.note-content-input::-webkit-scrollbar {
-  display: none; 
+  /* Personalizzazione della scrollbar */
+  scrollbar-width: thin; /* Per i browser che supportano il CSS standard */
+  scrollbar-color: #ccc transparent; /* Per i browser che supportano il CSS standard */
+
+  /* Per i browser basati su WebKit (come Chrome/Safari) */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #999;
+  }
 }
 
 .note-actions{
