@@ -2,7 +2,6 @@ body {
   background-color: rgb(238, 238, 238);
 }
 .App {
-  height: calc(100vh - 42px);
   display: flex;
   justify-content: center;
 }
