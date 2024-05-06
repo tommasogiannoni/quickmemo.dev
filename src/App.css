@@ -1,9 +1,13 @@
 body {
   overflow: hidden;
   background-color: rgb(238, 238, 238);
-  scroll-behavior: smooth;
+}
+.App {
+  height: calc(100vh - 42px);
+  display: flex;
+  justify-content: center;
   overflow-y: auto;
-  height: 100%;
+
   /* Personalizzazione della scrollbar */
   scrollbar-width: thin; /* Per i browser che supportano il CSS standard */
   scrollbar-color: #ccc transparent; /* Per i browser che supportano il CSS standard */
@@ -25,11 +29,6 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background-color: #999;
   }
-}
-.App {
-  height: calc(100vh - 42px);
-  display: flex;
-  justify-content: center;
 }
 
 .sticky-header {
