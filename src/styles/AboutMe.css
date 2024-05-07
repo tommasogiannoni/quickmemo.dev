@@ -6,7 +6,7 @@
     box-sizing: border-box;
     margin-bottom: 53px;
     position: unset;
-    min-height: 100vh;
+    min-height: calc(100vh - 53px);;
     height: 100%;
 }
 .title-about {
