@@ -3,7 +3,7 @@ import './App.css';
 import { Link, useLocation } from 'react-router-dom';
 import { Route, Routes } from 'react-router-dom';
 import NotePage from './components/NotePage';
-import AboutMe from './components/About Me';
+import AboutMe from './components/AboutMe';
 import Home from './components/Home';
 import { HomeIcon } from '@heroicons/react/24/outline'
 
@@ -74,7 +74,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
-          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/about-me" element={<AboutMe theme={theme}/>} />
         </Routes>
         <footer>
           <nav>

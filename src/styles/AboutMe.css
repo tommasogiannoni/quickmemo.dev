@@ -47,3 +47,39 @@
 .icon-about:active {
     transform: scale(1.2); /* Effetto di trasformazione al click */
 }
+
+.text-paragraph {
+    text-align: center; /* Centra il testo */
+    margin-bottom: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+  
+.text-paragraph p {
+    font-family: 'Frutiger';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px; /* Imposta una larghezza massima per il paragrafo */
+    margin: 0 auto; /* Centra il paragrafo orizzontalmente */
+    padding: 0 20px; /* Aggiunge spazio ai lati per adattarsi al mobile */
+}
+  
+.text-paragraph p a {
+    color: #cc0033;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+  
+.text-paragraph p a:hover {
+    color: #cc0033;
+}
+  
+  /* Fai in modo che il paragrafo si adatti al mobile */
+@media (max-width: 768px) {
+    .text-paragraph p {
+      font-size: 14px; /* Riduci la dimensione del carattere per i dispositivi mobili */
+      max-width: 100%; /* Larghezza massima del paragrafo al 100% per adattarsi al mobile */
+      padding: 0 10px; /* Riduci lo spazio ai lati per i dispositivi mobili */
+    }
+}
