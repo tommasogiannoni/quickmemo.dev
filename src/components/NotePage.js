@@ -10,6 +10,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [isClicked, setIsClicked] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -32,13 +33,23 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     }
   };
 
-  const saveNotes = () => {
+  const savedEffectAlert = () => {
+    setIsSaved(true);
+    setTimeout(() => {
+      setIsSaved(false);
+    }, 2000);
+  }
 
+  const clickOnSaveEffect = () => {
     setIsClicked(true);
     setTimeout(() => {
       setIsClicked(false);
     }, 400);
+  }
 
+  const saveNotes = () => {
+    // show effect
+    clickOnSaveEffect();
     // edit note
     if(location && location.state && location.state.note) {
       if(savedNotesList && savedNotesList.length > 0) {
@@ -49,7 +60,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
           savedNotesList[idx][2] = content;
           localStorage.setItem(savedNotesList[idx][0], JSON.stringify(savedNotesList[idx]));
         }
-
+        savedEffectAlert();
         return;
       }
     }
@@ -61,6 +72,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
       setSavedNotesList(newNotesList);
       localStorage.setItem(newNote[0], JSON.stringify(newNote));
     }
+    savedEffectAlert();
   }
 
   const updateTextareaHeight = (element) => {
@@ -72,11 +84,15 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     <div className="container">
       <div className='note-card'>
         <div className='note-actions'>
-          <button className={`save-button ${isClicked ? 'clicked' : ''}`} style={{ color: theme.color }} onClick={saveNotes}>
+          <button disabled={title.length === 0 || content.length === 0} 
+            className={`save-button ${isClicked ? 'clicked' : ''}`} 
+              style={{ color: theme.color }} 
+              onClick={saveNotes}>
             <BookmarkIcon className='save-icon'/>
           </button>
           {/* <FaDownload className='download-icon' style={{ color: theme.color }}/> */}
         </div>
+        {isSaved && <div className="alert">Saved!</div>}
         <div>
           <input 
             type="text" 
