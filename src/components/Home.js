@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { CiCirclePlus } from "react-icons/ci";
-import { TrashIcon } from '@heroicons/react/24/outline'
+import { TrashIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import '../styles/Home.css'
 
 function Home({savedNotesList, setSavedNotesList}) {
@@ -32,8 +31,8 @@ function Home({savedNotesList, setSavedNotesList}) {
                 <span className='notes-title'>Notes</span>
                 <div className='new-note-button-div'>
                   <Link to="/new">
-                    <CiCirclePlus 
-                      className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
+                    <PlusCircleIcon 
+                      className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
                       onTouchStart={handleTouchStart}
                       onTouchEnd={handleTouchEnd}
                     />
@@ -59,7 +58,7 @@ function Home({savedNotesList, setSavedNotesList}) {
               <h1 className="title">QuickMemo.<span className='me'>dev</span></h1>
               <div className='new-note-button-div'>
                 <Link to="/new">
-                  <CiCirclePlus 
+                  <PlusCircleIcon 
                     className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}

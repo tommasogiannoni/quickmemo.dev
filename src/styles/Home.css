@@ -32,10 +32,6 @@
     font-weight: bold;
     justify-content: space-between;
     display: flex;
-
-    .notes-title {
-        margin-top: 0.2em;
-    }
 }
 
 .note-item {
@@ -59,11 +55,16 @@
 
 .new-note-button-div {
     transition: transform 0.5s ease;
+    width: 3.2em;
+    text-align: end;
+    .new-note-button-2 {
+        width: 1.2em;
+    }
 }
 .new-note-button-div:hover,
 .new-note-button-div:active,
 .new-note-button-div.touch-active {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
   
 .delete-button {

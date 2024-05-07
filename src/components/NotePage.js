@@ -94,23 +94,27 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
         </div>
         {isSaved && <div className="alert">Saved!</div>}
         <div>
-          <input 
-            type="text" 
-            className="note-title-input" 
-            placeholder="Title" 
-            value={title} 
-            onChange={handleTitleChange} 
-          />
-        <textarea 
-          className="note-content-input" 
-          placeholder="Write me" 
-          value={content} 
-          onChange={handleContentChange}
-          style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px', color: theme.color}}
-          ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }} // Call updateTextareaHeight initially and whenever content changes
-        />
-      </div>
+          <div>
+            <input 
+              type="text" 
+              className="note-title-input" 
+              placeholder="Title" 
+              value={title} 
+              onChange={handleTitleChange} 
+            />
+          </div>
+          <div>
+            <textarea 
+              className="note-content-input" 
+              placeholder="Write me" 
+              value={content} 
+              onChange={handleContentChange}
+              style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px', color: theme.color}}
+              ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }} // Call updateTextareaHeight initially and whenever content changes
+            />
+          </div>
         </div>
+      </div>
     </div>
   );
 }
