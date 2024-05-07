@@ -1,12 +1,13 @@
 .aboutme-app {
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: fixed;
     width: 100%;
     box-sizing: border-box;
     margin-bottom: 53px;
+    position: unset;
+    min-height: 100vh;
+    height: 100%;
 }
 .title-about {
     color: #cc0033;
@@ -18,6 +19,7 @@
 .author-links {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
   
 .author-links .social-links {

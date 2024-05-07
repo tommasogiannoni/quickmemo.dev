@@ -6,8 +6,7 @@ body {
   overflow-x: hidden;
 }
 .App {
-  display: flex;
-  justify-content: center;
+  display: block;
 }
 
 .sticky-header {
@@ -110,7 +109,7 @@ body {
 
 footer {
   background-color: #ccd0d0;
-  position: fixed; 
+  position: static; 
   bottom: 0;
   left: 0;
   width: 100%;
@@ -127,6 +126,8 @@ footer nav ul li {
 
 nav {
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {

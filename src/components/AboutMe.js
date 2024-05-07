@@ -6,7 +6,7 @@ import '../styles/AboutMe.css';
 function AboutMe({theme}) {
   return (
     <div className='aboutme-app'>
-        <div className="content">
+        <div className="content-about">
             <div className='text-paragraph' style={{ color: theme.color }}>
                 <p>
                     As a software engineer, I've developed this app as an open-source project. If you're interested in contributing, you can find the project on <a href="https://github.com/tommasogiannoni" target="_blank" rel="noopener noreferrer">GitHub</a>.

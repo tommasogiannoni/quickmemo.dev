@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center; 
   width: 100%;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .note-card {
@@ -33,7 +35,7 @@
   font-size: 1.5rem;
   font-family: 'Gotham';
   resize: none;
-  margin-bottom: 53px;
+  margin-bottom: 5px;
 }
 
 .note-actions{
