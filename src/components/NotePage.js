@@ -9,6 +9,7 @@ import '../styles/NotePage.css'
 function NotePage({ theme, savedNotesList, setSavedNotesList })  {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const [isClicked, setIsClicked] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -32,6 +33,12 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
   };
 
   const saveNotes = () => {
+
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+    }, 400);
+
     // edit note
     if(location && location.state && location.state.note) {
       if(savedNotesList && savedNotesList.length > 0) {
@@ -65,7 +72,9 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     <div className="container">
       <div className='note-card'>
         <div className='note-actions'>
-          <BookmarkIcon className='save-icon' style={{ color: theme.color }} onClick={saveNotes}/>
+          <button className={`save-button ${isClicked ? 'clicked' : ''}`} style={{ color: theme.color }} onClick={saveNotes}>
+            <BookmarkIcon className='save-icon'/>
+          </button>
           {/* <FaDownload className='download-icon' style={{ color: theme.color }}/> */}
         </div>
         <div>

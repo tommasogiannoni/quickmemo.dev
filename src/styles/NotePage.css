@@ -46,20 +46,30 @@
   border-color: #ccd0d0;
 }
 
-.save-icon {
-  color: #adafaf !important;
+.save-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: #adafaf;
   margin-bottom: 0.1em;
   width: 1.5em;
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 
-.save-icon:hover,
-.save-icon:active {
-  transform: scale(1.2);
+.save-button:hover,
+.save-button:active {
+  transform: scale(1.1);
 }
 
-.note-actions :hover {
+/* Stile dell'icona */
+.save-icon {
+  color: #adafaf;
+  width: 22px; /* Regola la dimensione dell'icona */
+  height: 22px;
+}
+
+/* Stile cliccato */
+.save-button.clicked .save-icon {
   color: #287b28;
-  cursor: pointer;
-
 }
