@@ -57,8 +57,10 @@
     transition: transform 0.5s ease;
     width: 3.2em;
     text-align: end;
+    color: #ccd0d0;
     .new-note-button-2 {
         width: 1.2em;
+        color: #ccd0d0;
     }
 }
 .new-note-button-div:hover,
