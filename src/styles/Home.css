@@ -54,6 +54,15 @@
 .date-info {
     text-decoration: none !important;
 }
+
+.new-note-button-div {
+    transition: transform 0.5s ease;
+}
+.new-note-button-div:hover,
+.new-note-button-div:active,
+.new-note-button-div.touch-active {
+    transform: scale(1.1);
+}
   
 .delete-button {
     color: #cc0000;
@@ -65,8 +74,9 @@
     width: 2.5em;
     transition: transform 0.3s ease;
 }
+.delete-button:hover
 .delete-button:active {
-    transform: scale(1.2); /* Effetto di trasformazione al click */
+    transform: scale(1.1); 
 }
   
 a:link { 

@@ -30,13 +30,15 @@ function Home({savedNotesList, setSavedNotesList}) {
             <div className="content-list">
               <div className='list-title'>
                 <span className='notes-title'>Notes</span>
-                <Link to="/new">
-                  <CiCirclePlus 
-                    className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                  />
-                </Link>
+                <div className='new-note-button-div'>
+                  <Link to="/new">
+                    <CiCirclePlus 
+                      className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
+                      onTouchStart={handleTouchStart}
+                      onTouchEnd={handleTouchEnd}
+                    />
+                  </Link>
+                </div>
               </div>
               {savedNotesList.map((note, index) => (
                 <div key={index} className="note-item">
@@ -55,12 +57,13 @@ function Home({savedNotesList, setSavedNotesList}) {
           (
             <div className="content">
               <h1 className="title">QuickMemo.<span className='me'>dev</span></h1>
-              <div>
+              <div className='new-note-button-div'>
                 <Link to="/new">
                   <CiCirclePlus 
                     className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
                     onTouchStart={handleTouchStart}
                     onTouchEnd={handleTouchEnd}
+                    onClick={handleTouchEnd}
                   />
                 </Link>
               </div>

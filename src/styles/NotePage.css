@@ -50,11 +50,12 @@
   color: #adafaf !important;
   margin-bottom: 0.1em;
   width: 1.5em;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
+.save-icon:hover,
 .save-icon:active {
-  transform: rotate(-45deg) scale(1.2); /* Effetto di trasformazione al click */
+  transform: scale(1.2);
 }
 
 .note-actions :hover {

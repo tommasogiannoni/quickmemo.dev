@@ -21,13 +21,13 @@ body {
   margin-top: 0.5em;
   margin-right: 5px;
   color: #ccd0d0;
-  background: none; /* Rimuove completamente lo sfondo */
-  border: none; /* Rimuove il bordo */
+  background: none; 
+  border: none; 
   width: 1.8em;
   transition: transform 0.3s ease;
 }
 .icon:active {
-  transform: scale(1.2); /* Effetto di trasformazione al click */
+  transform: scale(1.2); 
 }
 
 .icon:hover,
@@ -44,11 +44,14 @@ body {
   align-items: center;
 }
 
-
 .title {
   margin-bottom: 10px;
   font-family: 'Frutiger';
   font-size: 50px;
+
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          
 
   .me {
     font-style: italic;
@@ -56,6 +59,31 @@ body {
 
   @media only screen and (max-width: 768px) { 
       font-size: 40px;
+  }
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
