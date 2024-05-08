@@ -2,9 +2,8 @@ import {React, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
 import { BookmarkIcon } from '@heroicons/react/24/solid'
-
+import { updateTextareaHeight } from '../utils/animation-utils'
 import '../styles/NotePage.css'
-
 
 function NotePage({ theme, savedNotesList, setSavedNotesList })  {
   const [title, setTitle] = useState('');
@@ -75,10 +74,6 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
     savedEffectAlert();
   }
 
-  const updateTextareaHeight = (element) => {
-    element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
-    element.style.height = `${element.scrollHeight}px`; // Setting the height to the scrollHeight
-  };
 
   return (
     <div className="container">
@@ -90,11 +85,10 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
               onClick={saveNotes}>
             <BookmarkIcon className='save-icon'/>
           </button>
-          {/* <FaDownload className='download-icon' style={{ color: theme.color }}/> */}
         </div>
         {isSaved && <div className="alert">Saved!</div>}
         <div>
-          <div>
+          <div className='input-field'>
             <input 
               type="text" 
               className="note-title-input" 
@@ -103,13 +97,13 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
               onChange={handleTitleChange} 
             />
           </div>
-          <div>
+          <div className='textarea-field'>
             <textarea 
               className="note-content-input" 
               placeholder="Write me" 
               value={content} 
               onChange={handleContentChange}
-              style={{ overflowX: 'hidden', overflowY: 'hidden', resize: 'none', minHeight: '50px', color: theme.color}}
+              style={{ color: theme.color}}
               ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }} // Call updateTextareaHeight initially and whenever content changes
             />
           </div>

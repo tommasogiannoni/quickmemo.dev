@@ -6,7 +6,7 @@ import NotePage from './components/NotePage';
 import AboutMe from './components/AboutMe';
 import Home from './components/Home';
 import { HomeIcon } from '@heroicons/react/24/outline'
-
+import { THEME } from './environments/env'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -18,17 +18,21 @@ function App() {
   const location = useLocation();
   const showHeader = location.pathname === '/about-me' || location.pathname === '/new';
   const theme = {
-    backgroundColor: darkMode ? '#2d2d2d' : '#eeeeee',
-    color: darkMode ? '#eeeeee' : '#000000',
+    backgroundColor: darkMode ? THEME.backgroundColorDark : THEME.backgroundColorLight,
+    color: darkMode ? THEME.colorDark : THEME.colorLight,
   };
+
+  const setTheme = (mode) => {
+    document.body.style.backgroundColor = mode ? THEME.backgroundColorDark : THEME.backgroundColorLight;
+    document.body.style.color = mode ? THEME.colorDark : THEME.colorLight;
+  }
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
     localStorage.setItem('darkMode', newDarkMode);
-    // set also body color
-    document.body.style.backgroundColor = newDarkMode ? '#2d2d2d' : '#eeeeee';
-    document.body.style.color = newDarkMode ? '#eeeeee' : '#000000';
+    // set theme
+    setTheme(newDarkMode);
   };
 
   const handleTouchStart = () => {
@@ -41,7 +45,7 @@ function App() {
 
   useEffect(() => {
     const savedNotes = [];
-
+    //
     for(let i=0; i<localStorage.length; i++) {
       const key = localStorage.key(i);
 
@@ -51,7 +55,6 @@ function App() {
     }
     setNotes(savedNotes);
 
-    // body theme update
     document.body.style.backgroundColor = theme.backgroundColor;
     document.body.style.color = theme.color;
 
