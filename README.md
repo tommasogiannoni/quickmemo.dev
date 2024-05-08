@@ -1,4 +1,4 @@
-# QuickMemo.dev
+# 📝 QuickMemo.dev
 ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen) ![JavaScript](https://img.shields.io/badge/Language-javascript-orange) ![React](https://img.shields.io/badge/React-18.3.1-blue)
 
 An open-source web application for intuitively taking and organizing notes directly from the browser,
