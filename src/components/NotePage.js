@@ -1,8 +1,7 @@
-import {React, useEffect, useState } from 'react';
+import {React, useEffect, useState,useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
 import { Save } from 'lucide-react';
-import { updateTextareaHeight } from '../utils/animation-utils'
 import '../styles/NotePage.css'
 
 function NotePage({ theme, savedNotesList, setSavedNotesList })  {
@@ -11,14 +10,40 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
   const [isClicked, setIsClicked] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   const location = useLocation();
+  const titleTextareaRef = useRef(null);
+  const contentTextareaRef = useRef(null);
 
   useEffect(() => {
-    if (location && location.state) { 
-      setTitle(location.state.note[1]);
-      setContent(location.state.note[2]);
+    // edit mode note data
+    if (location && location.state && location.state.note) {
+      const noteId = location.state.note[0];
+      const storedNote = localStorage.getItem(noteId);
+      if (storedNote) {
+        const parsedNote = JSON.parse(storedNote);
+        setTitle(parsedNote[1]);
+        setContent(parsedNote[2]);
+      }
+    }
+    // Ripristina i valori del localStorage se esistono
+    const savedTextareaHeight = localStorage.getItem('textareaHeight');
+    if (savedTextareaHeight && titleTextareaRef.current) {
+      titleTextareaRef.current.style.height = savedTextareaHeight;
+      contentTextareaRef.current.style.height = savedTextareaHeight;
     }
 
+    // Aggiorna l'altezza della textarea solo se esiste un riferimento valido
+    if (titleTextareaRef.current && contentTextareaRef.current) {
+      updateTextareaHeight(titleTextareaRef.current);
+      updateTextareaHeight(contentTextareaRef.current);
+    }
+
+
   }, [location]);
+
+  const updateTextareaHeight = (element) => {
+    element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
+    element.style.height = `${element.scrollHeight}px`; // Setting the height to the scrollHeight
+  };
 
   const handleTitleChange = (event) => {
     if (event.target.value.length <= 42) {
