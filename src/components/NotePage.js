@@ -1,7 +1,7 @@
 import {React, useEffect, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useLocation } from 'react-router-dom';
-import { BookmarkIcon } from '@heroicons/react/24/solid'
+import { Save } from 'lucide-react';
 import { updateTextareaHeight } from '../utils/animation-utils'
 import '../styles/NotePage.css'
 
@@ -83,7 +83,7 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
             className={`save-button ${isClicked ? 'clicked' : ''}`} 
               style={{ color: theme.color }} 
               onClick={saveNotes}>
-            <BookmarkIcon className='save-icon'/>
+            <Save className='save-icon'/>
           </button>
         </div>
         {isSaved && <div className="alert">Saved!</div>}
