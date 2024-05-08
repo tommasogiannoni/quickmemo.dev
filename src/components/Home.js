@@ -44,7 +44,7 @@ function Home({savedNotesList, setSavedNotesList}) {
                   <Link to={'/new'} state={{ note }}>
                     <div className="note-info">
                       <h2 className='note-title-detail'>{note[1]}</h2>
-                      <p className='date-info'>{note[3]}</p>
+                      <p className='date-info'>{note[5]}</p>
                     </div>
                   </Link>
                   <button className="delete-button" onClick={() => handleDeleteNote(note[0])}><TrashIcon className='icon-delete'/></button>
