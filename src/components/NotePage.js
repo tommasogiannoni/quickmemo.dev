@@ -22,6 +22,15 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
         const parsedNote = JSON.parse(storedNote);
         setTitle(parsedNote[1]);
         setContent(parsedNote[2]);
+        console.log(storedNote);
+        const titleHeight = parsedNote[3];
+        const contentHeight = parsedNote[4];
+        if (titleHeight && titleTextareaRef.current) {
+          titleTextareaRef.current.style.height = `${titleHeight}px`;
+        }
+        if (contentHeight && contentTextareaRef.current) {
+          contentTextareaRef.current.style.height = `${contentHeight}px`;
+        }
       }
     }
   }, [location]);
