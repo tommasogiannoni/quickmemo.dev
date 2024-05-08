@@ -2,6 +2,8 @@
 <br/>
 <img src="https://github.com/tommasogiannoni/quickmemo.dev/blob/master/src/assets/img-screen.png"></h2>
 <br/>
+![JavaScript](https://img.shields.io/badge/logo-javascript-blue?Languages=javascript) ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen) ![Version](https://img.shields.io/badge/react-18.3.1-red)
+
 An open-source web application for intuitively taking and organizing notes directly from the browser,
 optimized for seamless use on both desktop and mobile devices
 
