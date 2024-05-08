@@ -18,11 +18,10 @@
 .note-title-input {
   background-color: unset;
   width: 100%;
-  text-align: left;
   border: none;
   outline: none;
-  font-size: 2.1rem;
-  line-height: 2.1rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #cc0033;
@@ -30,6 +29,7 @@
   resize: none;
   overflow-x: hidden;
   overflow-y: hidden;
+  overflow-wrap: break-word;
 }
 
 .note-content-input {
@@ -42,6 +42,7 @@
   margin-bottom: 5px;
   overflow-x: hidden;
   overflow-y: hidden;
+  overflow-wrap: break-word;
   resize: none;
   min-height: 50px;
 }
