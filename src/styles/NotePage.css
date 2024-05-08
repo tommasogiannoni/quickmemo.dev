@@ -22,11 +22,14 @@
   border: none;
   outline: none;
   font-size: 2.1rem;
-  line-height: 1.5;
+  line-height: 2.1rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #cc0033;
   min-height: 50px;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .note-content-input {
@@ -44,7 +47,7 @@
 }
 
 .input-field {
-  margin: 0;
+  margin-top: 5em;
   padding: 0;
 }
 

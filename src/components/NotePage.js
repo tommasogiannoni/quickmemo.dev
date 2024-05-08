@@ -89,12 +89,13 @@ function NotePage({ theme, savedNotesList, setSavedNotesList })  {
         {isSaved && <div className="alert">Saved!</div>}
         <div>
           <div className='input-field'>
-            <input 
+            <textarea 
               type="text" 
               className="note-title-input" 
               placeholder="Title" 
               value={title} 
               onChange={handleTitleChange} 
+              ref={(textarea) => { if (textarea) updateTextareaHeight(textarea); }}
             />
           </div>
           <div className='textarea-field'>
