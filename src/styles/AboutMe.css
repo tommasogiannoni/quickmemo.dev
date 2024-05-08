@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 .aboutme-app {
     display: flex;
     flex-direction: column;
@@ -12,8 +13,17 @@
 .title-about {
     color: #cc0033;
     margin-bottom: 10px;
-    font-family: 'Frutiger';
+    font-family: 'Montserrat', sans-serif;
     font-size: 50px;
+}
+.about-section {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+.about-section p {
+    text-align: left; 
+    margin-bottom: 10px !important; 
 }
 
 .author-links {
@@ -56,12 +66,9 @@
     margin-left: 1em;
     margin-right: 1em;
 }
-  
+
 .text-paragraph p {
-    font-family: 'Frutiger';
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
     max-width: 600px; /* Imposta una larghezza massima per il paragrafo */
     margin: 0 auto; /* Centra il paragrafo orizzontalmente */
     padding: 0 20px; /* Aggiunge spazio ai lati per adattarsi al mobile */

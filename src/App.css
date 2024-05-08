@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Frutiger&display=swap');
+
 html {
   overflow-x: hidden;
 }
@@ -89,7 +91,7 @@ body {
 .new-note-button {
   color: #ccd0d0;
   border: none;
-  font-family: 'Gotham';
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease;
