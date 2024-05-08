@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Link, useLocation } from 'react-router-dom';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import NotePage from './components/NotePage';
 import AboutMe from './components/AboutMe';
 import Home from './components/Home';
@@ -78,6 +78,7 @@ function App() {
           <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/about-me" element={<AboutMe theme={theme}/>} />
+          <Route path="/*" element={<Navigate to="/" />} />
         </Routes>
         <footer>
           <nav>
