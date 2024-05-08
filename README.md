@@ -5,7 +5,6 @@ An open-source web application for intuitively taking and organizing notes direc
 optimized for seamless use on both desktop and mobile devices
 #
 <img src="https://github.com/tommasogiannoni/quickmemo.dev/blob/master/src/assets/img-screen.png"></h2>
-#
 ## Prerequisites
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Version: [React](https://react.dev/) version 18.3.1.
