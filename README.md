@@ -1,12 +1,11 @@
 # QuickMemo.dev
-<br/>
-<img src="https://github.com/tommasogiannoni/quickmemo.dev/blob/master/src/assets/img-screen.png"></h2>
-<br/>
-![JavaScript](https://img.shields.io/badge/logo-javascript-blue?logo=javascript) ![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen) ![React](https://img.shields.io/badge/react-18.3.1-red)
+![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen) ![JavaScript](https://img.shields.io/badge/logo-javascript-orange?logo=javascript) ![React](https://img.shields.io/badge/react-18.3.1-blue)
 
 An open-source web application for intuitively taking and organizing notes directly from the browser,
 optimized for seamless use on both desktop and mobile devices
-
+#
+<img src="https://github.com/tommasogiannoni/quickmemo.dev/blob/master/src/assets/img-screen.png"></h2>
+#
 ## Prerequisites
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Version: [React](https://react.dev/) version 18.3.1.
