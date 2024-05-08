@@ -24,6 +24,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #cc0033;
+  min-height: 50px;
 }
 
 .note-content-input {
@@ -34,7 +35,6 @@
   font-size: 1.5rem;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 5px;
-
   overflow-x: hidden;
   overflow-y: hidden;
   resize: none;
@@ -47,7 +47,8 @@
 }
 
 .textarea-field {
-  margin-left: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .note-actions{
