@@ -44,7 +44,8 @@
   overflow-y: hidden;
   overflow-wrap: break-word;
   resize: none;
-  min-height: fit-content;
+  min-height: fit-content!important;
+  margin-right: 1em;
 }
 
 .input-field {
