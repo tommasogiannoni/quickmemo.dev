@@ -25,7 +25,9 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
         const titleHeight = parsedNote[3];
         const contentHeight = parsedNote[4];
         titleTextareaRef.current.style.height = `${titleHeight}px`;
+        titleTextareaRef.current.style.minHeight  = `${titleHeight}px`;
         contentTextareaRef.current.style.height = `${contentHeight}px`;
+        contentTextareaRef.current.style.minHeight = `${contentHeight}px`;
         contentTextareaRef.current.focus();
       } 
     } else {
@@ -60,13 +62,16 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
     const savedContentHeight = localStorage.getItem('contentHeight');
     if (savedTitleHeight && savedContentHeight) {
       titleTextareaRef.current.style.height = `${savedTitleHeight}px`;
+      titleTextareaRef.current.style.minHeight = `${savedTitleHeight}px`;
       contentTextareaRef.current.style.height = `${savedContentHeight}px`;
+      contentTextareaRef.current.style.minHeight = `${savedContentHeight}px`;
     }
   }, []);
 
   const updateTextareaHeight = (element) => {
     element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
-    element.style.height = `${element.scrollHeight}px`; // Setting the height to the scrollHeight
+    element.style.height = `${element.scrollHeight}px`; 
+    element.style.minHeight = `${element.scrollHeight}px`; 
   };
 
   const handleTitleChange = (event) => {
