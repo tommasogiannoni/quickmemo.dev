@@ -24,13 +24,12 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
         setContent(parsedNote[2]);
         const titleHeight = parsedNote[3];
         const contentHeight = parsedNote[4];
-        if (titleHeight && titleTextareaRef.current) {
-          titleTextareaRef.current.style.height = `${titleHeight}px`;
-        }
-        if (contentHeight && contentTextareaRef.current) {
-          contentTextareaRef.current.style.height = `${contentHeight}px`;
-        }
-      }
+        titleTextareaRef.current.style.height = `${titleHeight}px`;
+        contentTextareaRef.current.style.height = `${contentHeight}px`;
+        contentTextareaRef.current.focus();
+      } 
+    } else {
+      titleTextareaRef.current.focus();
     }
   }, [location]);
 
@@ -77,7 +76,6 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
     // show effect
     clickOnSaveEffect();
 
-    // Aggiorna l'altezza delle textarea
     if (titleTextareaRef.current && contentTextareaRef.current) {
       updateTextareaHeight(titleTextareaRef.current);
       updateTextareaHeight(contentTextareaRef.current);
