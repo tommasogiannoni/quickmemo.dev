@@ -54,7 +54,7 @@ function Home({savedNotesList, setSavedNotesList}) {
           ) 
           : 
           (
-            <div className="content">
+            <div className="content-home">
               <h1 className="title">QuickMemo.<span className='me'>dev</span></h1>
               <div className='new-note-button-div'>
                 <Link to="/new">

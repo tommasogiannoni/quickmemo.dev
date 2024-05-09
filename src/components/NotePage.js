@@ -70,13 +70,13 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
   };
 
   const handleTitleChange = (event) => {
-    if (event.target.value.length <= 42) {
+    if (event.target.value.length <= 100) {
       setTitle(event.target.value);
     }
   };
 
   const handleContentChange = (event) => {
-    if (event.target.value.length <= 5000) {
+    if (event.target.value.length <= 4000) {
       setContent(event.target.value);
     }
   };

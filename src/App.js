@@ -61,19 +61,21 @@ function App() {
   }, [theme.backgroundColor, theme.color]);
 
   return (
-    <div>
-      {showHeader && (
-        <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }} >
+    <div className='webapp'>
+      {showHeader ? (
+        <header className="sticky-header" style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
           <Link to="/">
-            <HomeIcon 
+            <HomeIcon
               className={`icon ${isTouchActive ? 'touch-active' : ''}`}
               onTouchStart={handleTouchStart}
               onTouchEnd={handleTouchEnd}
             />
           </Link>
         </header>
+      ) : (
+        <div className="sticky-header" />
       )}
-      <div className="App" style={theme}>
+      <div className='app' style={theme}>
         <Routes>
           <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />

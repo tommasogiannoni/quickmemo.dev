@@ -1,21 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Frutiger&display=swap');
-
-html {
-  overflow-x: hidden;
+* {
+  box-sizing: border-box;
 }
-body {
+body, html {
   background-color: rgb(238, 238, 238);
   overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-.App {
-  display: block;
+
+.webapp {
+  height: calc(100svh - 53px - 50px);
+}
+.app {
+  height: 100%;
 }
 
 .sticky-header {
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 50px;
 }
 
 .icon {
