@@ -9,10 +9,9 @@ function AboutMe({theme}) {
         <div className="content-about">
             <div className='text-paragraph' style={{ color: theme.color }}>
             <div className='about-section'>
-                <p>👋 Hi there! I'm Tommaso, a front-end software engineer. I've crafted this web application, an open-source project that I've proudly showcased in my <a href="https://github.com/tommasogiannoni" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+                <p>👋 Hi there! I'm Tommaso, a front-end software engineer. I've developed this web application, an open-source project that I've proudly showcased in my <a href="https://github.com/tommasogiannoni" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
                 <p>💡 I got ideas from different online apps to make a simple version where you can quickly write down notes and ideas straight from your browser. It works on mobile too, but I know it could be made even better. 📱</p>
                 <p>🎨 I've put significant effort into both the architectural structure and design of the app. I'm always open to feedback or ideas to further enhance it!</p>
-                <p>🛠️ I've utilized the beautiful icons from <a href="https://heroicons.com/" target="_blank" rel="noopener noreferrer">Heroicons</a> and the Montserrat font to add a touch of style to the app.</p>
                 <p>🐞 If you encounter any bugs or have any ideas to make it even better, feel free to reach out to me via <a href="mailto:tommaso.giannoni@yahoo.it" target="_blank" rel="noopener noreferrer">email</a>. If you're a developer and want to contribute, go ahead and open a pull request on the GitHub project. I'm always open to new contributors!</p>
             </div>
             </div>
