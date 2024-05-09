@@ -21,7 +21,7 @@
   border: none;
   outline: none;
   font-size: 1.5rem;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   color: #cc0033;
@@ -38,6 +38,8 @@
   border: none;
   outline: none;
   font-size: 1.5rem;
+  line-height: 1.6rem;
+  font-weight:500;
   font-family: 'Montserrat', sans-serif;
   margin-bottom: 5px;
   overflow-x: hidden;
