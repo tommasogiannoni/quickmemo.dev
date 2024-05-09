@@ -46,6 +46,24 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
     }
   }, [title, content]);
 
+  useEffect(() => {
+    // Save textarea heights to localStorage
+    if (titleTextareaRef.current && contentTextareaRef.current) {
+      localStorage.setItem('titleHeight', titleTextareaRef.current.scrollHeight);
+      localStorage.setItem('contentHeight', contentTextareaRef.current.scrollHeight);
+    }
+  }, [title, content]);
+  
+  useEffect(() => {
+    // Set textarea heights from localStorage when component mounts
+    const savedTitleHeight = localStorage.getItem('titleHeight');
+    const savedContentHeight = localStorage.getItem('contentHeight');
+    if (savedTitleHeight && savedContentHeight) {
+      titleTextareaRef.current.style.height = `${savedTitleHeight}px`;
+      contentTextareaRef.current.style.height = `${savedContentHeight}px`;
+    }
+  }, []);
+
   const updateTextareaHeight = (element) => {
     element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
     element.style.height = `${element.scrollHeight}px`; // Setting the height to the scrollHeight

@@ -13,6 +13,7 @@
   padding: 20px;
   width: 100%;
   max-width: 720px;
+  -webkit-font-smoothing: antialiased;
 }
 
 .note-title-input {
