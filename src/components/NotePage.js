@@ -31,6 +31,11 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
     } else {
       titleTextareaRef.current.focus();
     }
+    if (titleTextareaRef.current && contentTextareaRef.current) {
+      updateTextareaHeight(titleTextareaRef.current);
+      updateTextareaHeight(contentTextareaRef.current);
+    }
+    contentTextareaRef.current.scrollTop = contentTextareaRef.current.scrollHeight;
   }, [location]);
 
   useEffect(() => {
