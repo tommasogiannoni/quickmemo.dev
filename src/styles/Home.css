@@ -84,6 +84,10 @@
 .delete-button:active {
     transform: scale(1.1); 
 }
+
+.me {
+    color: #cc0033;
+}
   
 a:link { 
     text-decoration: none;
