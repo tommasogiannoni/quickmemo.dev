@@ -46,6 +46,8 @@
 .note-info {
     flex: 1;
     font-family: 'Montserrat', sans-serif;
+    width: 200px;
+    word-wrap: break-word; 
 }
 .note-title-detail {
     text-decoration: underline;
