@@ -24,20 +24,22 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
         setContent(parsedNote[2]);
         const titleHeight = parsedNote[3];
         const contentHeight = parsedNote[4];
+        // update view heights data
         titleTextareaRef.current.style.height = `${titleHeight}px`;
         titleTextareaRef.current.style.minHeight  = `${titleHeight}px`;
         contentTextareaRef.current.style.height = `${contentHeight}px`;
         contentTextareaRef.current.style.minHeight = `${contentHeight}px`;
-        contentTextareaRef.current.focus();
       } 
-    } else {
-      titleTextareaRef.current.focus();
-    }
+    } 
+    // update heights
     if (titleTextareaRef.current && contentTextareaRef.current) {
       updateTextareaHeight(titleTextareaRef.current);
       updateTextareaHeight(contentTextareaRef.current);
     }
+
     contentTextareaRef.current.scrollTop = contentTextareaRef.current.scrollHeight;
+    // set focus
+    titleTextareaRef.current.focus();
   }, [location]);
 
   useEffect(() => {
@@ -48,25 +50,25 @@ function NotePage({ theme, savedNotesList, setSavedNotesList }) {
     }
   }, [title, content]);
 
-  useEffect(() => {
-    // Save textarea heights to localStorage
-    if (titleTextareaRef.current && contentTextareaRef.current) {
-      localStorage.setItem('titleHeight', titleTextareaRef.current.scrollHeight);
-      localStorage.setItem('contentHeight', contentTextareaRef.current.scrollHeight);
-    }
-  }, [title, content]);
+  //useEffect(() => {
+  //  // Save textarea heights to localStorage
+  //  if (titleTextareaRef.current && contentTextareaRef.current) {
+  //    localStorage.setItem('titleHeight', titleTextareaRef.current.scrollHeight);
+  //    localStorage.setItem('contentHeight', contentTextareaRef.current.scrollHeight);
+  //  }
+  //}, [title, content]);
   
-  useEffect(() => {
-    // Set textarea heights from localStorage when component mounts
-    const savedTitleHeight = localStorage.getItem('titleHeight');
-    const savedContentHeight = localStorage.getItem('contentHeight');
-    if (savedTitleHeight && savedContentHeight) {
-      titleTextareaRef.current.style.height = `${savedTitleHeight}px`;
-      titleTextareaRef.current.style.minHeight = `${savedTitleHeight}px`;
-      contentTextareaRef.current.style.height = `${savedContentHeight}px`;
-      contentTextareaRef.current.style.minHeight = `${savedContentHeight}px`;
-    }
-  }, []);
+  //useEffect(() => {
+  //  // Set textarea heights from localStorage when component mounts
+  //  const savedTitleHeight = localStorage.getItem('titleHeight');
+  //  const savedContentHeight = localStorage.getItem('contentHeight');
+  //  if (savedTitleHeight && savedContentHeight) {
+  //    titleTextareaRef.current.style.height = `${savedTitleHeight}px`;
+  //    titleTextareaRef.current.style.minHeight = `${savedTitleHeight}px`;
+  //    contentTextareaRef.current.style.height = `${savedContentHeight}px`;
+  //    contentTextareaRef.current.style.minHeight = `${savedContentHeight}px`;
+  //  }
+  //}, []);
 
   const updateTextareaHeight = (element) => {
     element.style.height = 'auto'; // Resetting the height to auto to calculate the scrollHeight
