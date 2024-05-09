@@ -15,7 +15,6 @@
 }
 
 .content-list {
-    margin-top: 3em;
     border-radius: 8px;
     padding: 20px;
     width: 100%;
@@ -79,7 +78,7 @@
     border-radius: 4px;
     cursor: pointer;
     background-color: unset;
-    width: 2.5em;
+    width: 2.6em;
     transition: transform 0.3s ease;
 }
 .delete-button:hover
