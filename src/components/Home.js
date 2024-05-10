@@ -30,16 +30,16 @@ function Home({savedNotesList, setSavedNotesList, theme}) {
               <div className='list-title'>
                 <span className='notes-title'>Notes</span>
                 <div className='new-note-button-div'>
-                  <button className='new-note-button-class'>
                     <Link to="/new">
-                      <PlusCircleIcon 
-                       style={{color: theme.color}}
-                        className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
-                        onTouchStart={handleTouchStart}
-                        onTouchEnd={handleTouchEnd}
-                      />
+                      <button className='new-note-button-class'>
+                        <PlusCircleIcon 
+                        style={{color: theme.color}}
+                          className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
+                          onTouchStart={handleTouchStart}
+                          onTouchEnd={handleTouchEnd}
+                        />
+                      </button>
                     </Link>
-                  </button>
                 </div>
               </div>
               {savedNotesList.map((note, index) => (
