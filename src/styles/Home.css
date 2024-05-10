@@ -54,27 +54,11 @@
 .date-info {
     text-decoration: none !important;
 }
-
-.new-note-button-div {
-    transition: transform 0.5s ease;
-    width: 3.2em;
-    text-align: end;
-    color: #ccd0d0;
-    .new-note-button-2 {
-        width: 1.2em;
-        color: #ccd0d0;
-    }
-}
-.new-note-button-div:hover,
-.new-note-button-div:active,
-.new-note-button-div.touch-active {
-    transform: scale(1.02);
-}
   
 .delete-button {
-    color: #cc0000;
+    color: #adafaf;
     border: none;
-    padding: 7px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
     border-radius: 4px;
     cursor: pointer;
     background-color: unset;
@@ -83,7 +67,31 @@
 }
 .delete-button:hover
 .delete-button:active {
-    transform: scale(1.1); 
+    color: #cc0033;
+}
+
+.new-note-button-div {
+    margin-top: 5px;
+}
+.new-note-button-main {
+    transition: transform 0.5s ease;
+    width: 3.2em;
+    text-align: end;
+    color: #ccd0d0;
+}
+.new-note-button-class {
+    border: none;
+    padding: 5px 5px 5px 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: unset;
+    color: #ccd0d0;
+    width: 2.8em;
+    transition: transform 0.3s ease;
+}
+.new-note-button-class:hover,
+.new-note-button-class:active{
+    color: #cc0033;
 }
 
 .me {

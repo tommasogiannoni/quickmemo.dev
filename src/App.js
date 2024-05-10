@@ -77,7 +77,7 @@ function App() {
       )}
       <div className='app' style={theme}>
         <Routes>
-          <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes}/>} />
+          <Route path="/" element={<Home savedNotesList={notes} setSavedNotesList={setNotes} theme={theme}/>} />
           <Route path="/new" element={<NotePage theme={theme} savedNotesList={notes} setSavedNotesList={setNotes}/>} />
           <Route path="/about-me" element={<AboutMe theme={theme}/>} />
           <Route path="/*" element={<Navigate to="/" />} />

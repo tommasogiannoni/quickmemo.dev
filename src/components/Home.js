@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { TrashIcon, PlusCircleIcon } from '@heroicons/react/24/outline'
 import '../styles/Home.css'
 
-function Home({savedNotesList, setSavedNotesList}) {
+function Home({savedNotesList, setSavedNotesList, theme}) {
   const [isTouchActive, setIsTouchActive] = useState(false);
 
   const handleTouchStart = () => {
@@ -30,13 +30,16 @@ function Home({savedNotesList, setSavedNotesList}) {
               <div className='list-title'>
                 <span className='notes-title'>Notes</span>
                 <div className='new-note-button-div'>
-                  <Link to="/new">
-                    <PlusCircleIcon 
-                      className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
-                      onTouchStart={handleTouchStart}
-                      onTouchEnd={handleTouchEnd}
-                    />
-                  </Link>
+                  <button className='new-note-button-class'>
+                    <Link to="/new">
+                      <PlusCircleIcon 
+                       style={{color: theme.color}}
+                        className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
+                        onTouchStart={handleTouchStart}
+                        onTouchEnd={handleTouchEnd}
+                      />
+                    </Link>
+                  </button>
                 </div>
               </div>
               {savedNotesList.map((note, index) => (
@@ -56,7 +59,7 @@ function Home({savedNotesList, setSavedNotesList}) {
           (
             <div className="content-home">
               <h1 className="title">quickmemo.<span className='me'>dev</span></h1>
-              <div className='new-note-button-div'>
+              <div className='new-note-button-main'>
                 <Link to="/new">
                   <PlusCircleIcon 
                     className={`new-note-button ${isTouchActive ? 'touch-active' : ''}`}
