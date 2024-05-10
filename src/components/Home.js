@@ -33,7 +33,7 @@ function Home({savedNotesList, setSavedNotesList, theme}) {
                     <Link to="/new">
                       <button className='new-note-button-class'>
                         <PlusCircleIcon 
-                        style={{color: theme.color}}
+                          style={{color: theme.color}}
                           className={`new-note-button-2 ${isTouchActive ? 'touch-active' : ''}`}
                           onTouchStart={handleTouchStart}
                           onTouchEnd={handleTouchEnd}

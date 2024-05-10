@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .container {
   display: flex;
   justify-content: center; 
@@ -81,14 +82,12 @@
   transform: scale(1.1);
 }
 
-/* Stile dell'icona */
 .save-icon {
   color: #adafaf;
-  width: 22px; /* Regola la dimensione dell'icona */
+  width: 22px; 
   height: 22px;
 }
 
-/* Stile cliccato */
 .save-button.clicked .save-icon {
   color: #287b28;
 }

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 .aboutme-app {
     display: flex;
     flex-direction: column;
@@ -55,11 +56,11 @@
     transition: transform 0.3s ease;
 }
 .icon-about:active {
-    transform: scale(1.2); /* Effetto di trasformazione al click */
+    transform: scale(1.2);
 }
 
 .text-paragraph {
-    text-align: center; /* Centra il testo */
+    text-align: center;
     margin-bottom: 2em;
     margin-left: 1em;
     margin-right: 1em;
@@ -67,9 +68,9 @@
 
 .text-paragraph p {
     font-family: 'Montserrat', sans-serif;
-    max-width: 600px; /* Imposta una larghezza massima per il paragrafo */
-    margin: 0 auto; /* Centra il paragrafo orizzontalmente */
-    padding: 0 20px; /* Aggiunge spazio ai lati per adattarsi al mobile */
+    max-width: 600px;
+    margin: 0 auto; 
+    padding: 0 20px;
 }
   
 .text-paragraph p a {
@@ -82,11 +83,11 @@
     color: #cc0033;
 }
   
-  /* Fai in modo che il paragrafo si adatti al mobile */
+
 @media (max-width: 768px) {
     .text-paragraph p {
-      font-size: 14px; /* Riduci la dimensione del carattere per i dispositivi mobili */
-      max-width: 100%; /* Larghezza massima del paragrafo al 100% per adattarsi al mobile */
-      padding: 0 10px; /* Riduci lo spazio ai lati per i dispositivi mobili */
+      font-size: 14px; 
+      max-width: 100%; 
+      padding: 0 10px; 
     }
 }
